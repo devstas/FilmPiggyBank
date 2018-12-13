@@ -25,8 +25,12 @@ class FilmViewController: UIViewController {
     @IBAction func favoriteBtn(_ sender: Any) {
         isShowFavorite = !isShowFavorite
         favoriteBtn.title = isShowFavorite ? "Всё" : "Избранное"
+        searchBar.text = ""
         viewModel.showMoviesFromDB(onlyFavorite: isShowFavorite) {
             self.tableView.reloadData()
+            // scroll to first cell
+            let indexPat = IndexPath(row: 0, section: 0)
+            self.tableView.scrollToRow(at: indexPat, at: .top, animated: false)
         }
     }
     
@@ -81,6 +85,7 @@ extension FilmViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)
+        isShowFavorite = false
         guard let text = searchBar.text else { return }
         uploadFilm(searchText: text)
     }
