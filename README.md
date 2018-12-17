@@ -1,7 +1,7 @@
 # FilmPiggyBank
  + movie search
- + view movie info
- + view movie info offline
+ + view film info
+ + view film info offline
  + add to favorites and view offline
 # dependence
  + Realm (Pods)
