@@ -7,4 +7,4 @@
  + Realm (Pods)
 # implementation details
  - use Swift 4.2
- - try use MVVM without Reactive
+ - use MVVM without Reactive
