@@ -1,5 +1,5 @@
 # FilmPiggyBank
- + movie search
+ + movie search 
  + view film info
  + view film info offline
  + add to favorites and view offline
